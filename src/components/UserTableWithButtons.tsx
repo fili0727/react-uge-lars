@@ -38,7 +38,7 @@ export default function UserTableWithButtons({ users, editUser }: UserTableProps
               <td>{user.isActive ? "Yes" : "No"}</td>
               <td>
                 {/* Attach the event handler to the edit button */}
-                <button onClick={() => handleEditUser(user.id)}>
+                <button onClick={() => handleEditUser(user.id || -1)}>
                   Edit
                 </button>
               </td>
