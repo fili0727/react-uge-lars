@@ -13,11 +13,6 @@ export default function UseEffectDemo({ title }: BaseProps) {
   const [count, setCount] = useState(0);
   const [shouldCount, setShouldCount] = useState(false);
 
-
-  useEffect(() => {
-  }, []
-    );
-
   useEffect(() => {
    if(!shouldCount) return
     const i = setInterval(() => {
@@ -27,6 +22,10 @@ export default function UseEffectDemo({ title }: BaseProps) {
       clearInterval(i);
     };
   }, [shouldCount]);
+
+
+  useEffect(() => {
+  }, [] );
 
 
 
